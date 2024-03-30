@@ -1,6 +1,6 @@
 import { getServerSession } from "next-auth";
 import authOptions from "../../src/pages/api/auth/[...nextauth]";
-import DeleteButton from "@/src/components/auth/DeleteButton";
+import DeleteButton from "@/app/logout/DeleteButton";
 import Link from "next/link";
 
 type SessionType = {

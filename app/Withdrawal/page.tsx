@@ -1,7 +1,5 @@
 import React from "react";
-import { Session } from "next-auth";
-import DeleteUser from "../login/DeleteUser";
-import Link from "next/link";
+import DeleteUser from "../logout/DeleteUser";
 
 const DeletePage = () => {
   return (

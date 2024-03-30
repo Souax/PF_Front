@@ -23,11 +23,16 @@ const Profile = async ({ session }: { session: Session | null }) => {
               className="rounded-full"
             />
             <div className="flex flex-col">
-              <div className="text-xl text-white font-semibold pb-[1rem]">
+              <div className="text-xl text-white font-semibold">
                 {session.user && session.user.name}
               </div>
               <div className="text-gray-300">
                 {session.user && session.user.email}
+              </div>
+              <div>
+                <button className="text-white text-sm bg-blue-500 hover:bg-blue-600 rounded-md p-1 mt-5">
+                  <a href="/profile/edit">プロフィールを編集</a>
+                </button>
               </div>
             </div>
           </div>

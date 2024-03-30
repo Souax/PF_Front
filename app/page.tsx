@@ -8,18 +8,18 @@ import {
   getPopularityBooks,
   getRecommendationBooks,
 } from "@/src/TopPageAPI";
-import TopPage from "./popularity/TopSlide";
 import PopularityBook from "./components/BookHome/PopularityBookHome";
-import PopularityPage from "./popularity/PopularityPage";
+import TopPage from "./popularity/TopSlide";
 
 export default async function Home() {
-  //const newbooks = await getNewBooks();
+  const newbooks = await getNewBooks();
   const popularitybooks = await getPopularityBooks();
   const recommendationbooks = await getRecommendationBooks();
 
   return (
     <>
       <main>
+        <TopPage newbooks={newbooks} />
         <PopularityBook popularitybooks={popularitybooks} />
         <BookRecommendation recommendationbooks={recommendationbooks} />
         <div className="flex justify-center items-center pb-10">

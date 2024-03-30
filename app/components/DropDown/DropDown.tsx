@@ -2,7 +2,7 @@
 import React, { ReactNode, useState } from "react";
 import Link from "next/link";
 import { AiOutlineSetting } from "react-icons/ai";
-import LogoutButton from "@/src/components/auth/LogoutButton";
+import LogoutButton from "@/app/logout/LogoutButton";
 import { MdOutlineDelete } from "react-icons/md";
 
 type DropdownMenuProps = {

@@ -1,5 +1,5 @@
 import React from "react";
-import Logout from "@/app/login/Logout";
+import Logout from "@/app/logout/Logout";
 import Login from "@/app/login/Login";
 import { Session } from "next-auth";
 
