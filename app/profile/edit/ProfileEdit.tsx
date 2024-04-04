@@ -25,7 +25,7 @@ const ProfileEdit = ({ session }: { session: Session | null }) => {
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
-      setImageFile(e.target.files[0]); // 画像ファイルをsetImageFileで設定
+      setImageFile(e.target.files[0]);
     } else {
       setImageFile(null);
     }
@@ -35,9 +35,9 @@ const ProfileEdit = ({ session }: { session: Session | null }) => {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append("name", name);
+    formData.append("user[name]", name);
     if (imageFile) {
-      formData.append("image", imageFile);
+      formData.append("user[image]", imageFile);
     }
 
     try {

@@ -30,15 +30,17 @@ const Profile = async ({ session }: { session: Session | null }) => {
                 {session.user && session.user.email}
               </div>
               <div>
+                {/*
                 <button className="text-white text-sm bg-blue-500 hover:bg-blue-600 rounded-md p-1 mt-5">
                   <a href="/profile/edit">プロフィールを編集</a>
                 </button>
+                */}
               </div>
             </div>
           </div>
         </div>
       ) : (
-        <div>
+        <div className="flex flex-col justify-center p-4">
           <p>ログインしてください</p>
         </div>
       )}
